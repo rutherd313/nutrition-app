@@ -1,0 +1,73 @@
+body {
+    color: #333;
+    font-family: arial;
+    max-width: 80%;
+    margin: 0 auto; 
+    padding: 0 16px;
+    background-image: url('../img/pineapple2.jpg');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.main-content {
+/* take up left over space */
+    flex-grow: 1;
+
+}
+
+footer {
+    color: #888;
+    border-top: 1px solid #eee;
+    margin-top: 16px;
+    padding: 16px 0;
+}
+
+header {
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+h1 {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+/* form {
+    display: block;
+} */
+
+header a {
+    color: #888;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+table {
+    max-width: 65%;
+    margin-top: 30px;
+}
+
+table tr td {
+    /* display: block; */
+    border-collapse: collapse;
+}
+
+input {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #888;
+    background: #888;
+    color: #fff;
+    padding: 8px;
+}
