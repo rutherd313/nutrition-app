@@ -25,7 +25,7 @@ foodForm.addEventListener('submit', (e) => {
 
     const food = search.value;
     
-    fetch('http://localhost:3000/fetchFoods?food=' + food).then((response) => {
+    fetch('/fetchFoods?food=' + food).then((response) => {
         response.json().then((data) => {
             if (food) {
                 if (data.error) {

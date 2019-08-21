@@ -1,5 +1,6 @@
 const express = require('express');
-const port = 3000;
+//listens to heroku
+const port = process.env.PORT || 3000;
 const path = require('path');
 const hbs = require('hbs');
 const foodSearch = require('./utils/foodSearch');
