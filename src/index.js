@@ -6,6 +6,11 @@ const hbs = require('hbs');
 const foodSearch = require('./utils/foodSearch');
 const nutrients = require('./utils/nutrients');
 const fetchFoods = require('./utils/fetchFoods');
+const userRouter = require('./routers/user');
+
+//initiates mongodb
+require('./db/mongoose');
+const User = require('./models/user');
 
 console.log(path.join(__dirname, '../public'));
 const app = express(__dirname, '../templates');
@@ -22,8 +27,25 @@ app.set('views', viewspath);
 //takes path to directory where partials live
 hbs.registerPartials(partialsPath);
 
+/* //registering middleware
+app.use((req, res, next) => {
+    if (req.method === 'GET') {
+        res.send('GET requests are disabled');
+    } else {
+        //asserts middleware
+        next()
+    }
+})
+
+app.use((req, res, next) => {
+    res.status(503).send('Site is currently down!');
+}) */
+
 //matches index.html
 app.use(express.static(publicDirectoryPath));
+app.use(express.json());
+app.use(userRouter);
+
 
 //handlebars
 app.get('', (req, res) => {
