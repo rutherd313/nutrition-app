@@ -20,7 +20,7 @@
     "mustache": "^3.0.1",
     "nodemon": "^1.19.1",
     "request": "^2.88.0",
-    "validator": "^11.1.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {}
 }
